@@ -8,7 +8,7 @@ const AboutSection = () => {
       <div className="w-full min-h-screen flex flex-col md:flex-row">
         {/* image section */}
         <div className="w-full md:w-1/2 h-[300px] md:h-auto flex justify-center items-center p-4">
-          <div className=" h-72 md:w-80 md:h-[600px] lg:w-96 lg:h-[700px] rounded-full overflow-hidden shadow-lg">
+          <div className=" h-80 md:w-80 md:h-[600px] lg:w-96 lg:h-[700px] rounded-full overflow-hidden shadow-lg">
             <img
               src="/dp.jpg"
               alt="profile"
