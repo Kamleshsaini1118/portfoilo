@@ -1,4 +1,5 @@
 import React from "react";
+import { FaReact, FaDatabase, FaServer, FaCode, FaSearchengin } from "react-icons/fa";
 
 const TechSection = () => {
   const boxes = [
@@ -6,26 +7,32 @@ const TechSection = () => {
       title: "Welcome to My Tech Skills",
       desc: "This section showcases my core technical skills and knowledge areas across development and optimization.",
       customStyle: true,
+      icon: <FaCode size={40} className="mb-4 text-green-400" />,
     },
     {
       title: "Languages",
       desc: "C++, Python",
+      icon: <FaCode size={40} className="mb-4 text-blue-400" />,
     },
     {
       title: "Frontend Development",
       desc: "HTML & CSS, JavaScript, React.js, Tailwind CSS",
+      icon: <FaReact size={40} className="mb-4 text-cyan-400" />,
     },
     {
       title: "Backend Development",
       desc: "Node.js & Express.js for building APIs and server-side logic efficiently.",
+      icon: <FaServer size={40} className="mb-4 text-orange-400" />,
     },
     {
       title: "Database",
       desc: "SQL (MySQL) for relational data, NoSQL (MongoDB) for flexible schema design.",
+      icon: <FaDatabase size={40} className="mb-4 text-yellow-400" />,
     },
     {
       title: "SEO Optimization",
       desc: "Optimizing websites for search engines to improve visibility and traffic.",
+      icon: <FaSearchengin size={40} className="mb-4 text-pink-400" />,
     },
   ];
 
@@ -48,8 +55,8 @@ const TechSection = () => {
                     ? "h-60 md:h-60 border-2 border-zinc-900/50 shadow-xl"
                     : "h-60 bg-zinc-900/50 border-2 border-zinc-900/50 shadow-lg"
                 }
-                active:-translate-y-2 focus:-translate-y-2
-                hover:-translate-y-2 group-hover:shadow-lg
+                active:-translate-y-1 focus:-translate-y-1
+                hover:-translate-y-1 group-hover:shadow-lg
                 ${
                   box.customStyle
                     ? "hover:shadow-purple-500/40 group-hover:shadow-purple-500/40"
@@ -57,6 +64,9 @@ const TechSection = () => {
                 }
               `}
             >
+              {/* Icon */}
+              {box.icon && box.icon}
+
               <h3
                 className={`text-center font-semibold mb-2 ${
                   box.customStyle ? "text-lg md:text-2xl" : "text-lg md:text-2xl"
@@ -66,9 +76,7 @@ const TechSection = () => {
               </h3>
               <p
                 className={`text-center ${
-                  box.customStyle
-                    ? "text-zinc-500 text-xs md:text-base"
-                    : "text-zinc-500 text-xs md:text-base"
+                  box.customStyle ? "text-zinc-500 text-xs md:text-base" : "text-zinc-500 text-xs md:text-base"
                 }`}
               >
                 {box.desc}
