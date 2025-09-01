@@ -55,8 +55,8 @@ const TechSection = () => {
                     ? "h-60 md:h-60 border-2 border-zinc-900/50 shadow-xl"
                     : "h-60 bg-zinc-900/50 border-2 border-zinc-900/50 shadow-lg"
                 }
-                active:-translate-y-1 focus:-translate-y-1
-                hover:-translate-y-1 group-hover:shadow-lg
+                active:-translate-y-2 focus:-translate-y-2
+                hover:-translate-y-2 group-hover:shadow-lg
                 ${
                   box.customStyle
                     ? "hover:shadow-purple-500/40 group-hover:shadow-purple-500/40"
