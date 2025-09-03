@@ -11,7 +11,7 @@ const HeroSection = () => {
       </h3>
 
       {/* Name */}
-      <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold mt-5 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+      <h1 className="text-5xl md:text-7xl lg:text-9xl font-semibold mt-5 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
         Kamlesh Saini.
       </h1>
 

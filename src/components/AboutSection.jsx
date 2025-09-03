@@ -19,11 +19,11 @@ const AboutSection = () => {
 
         {/* detail section */}
         <div className="w-full md:w-1/2 flex flex-col justify-start items-start p-6 sm:p-10 gap-6">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
             About Me⚡
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-zinc-400">
-            Hey! I'm <span className="font-medium text-white">Kamlesh Saini</span>. <br />
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-zinc-400 font-thin">
+            Hey! I'm <span className="text-white">Kamlesh Saini</span>. <br />
             I’m a passionate Full Stack Developer with expertise in the MERN
             stack and modern web technologies. I specialize in building scalable
             web applications, service-based projects, and dynamic frontends with
@@ -50,7 +50,7 @@ const AboutSection = () => {
       </div>
 
       {/* counter section */}
-      <div className="w-full bg-zinc-900/50 py-4 sm:py-12 mt-6 rounded-2xl shadow-lg">
+      <div className="w-full bg-zinc-900/50 py-4 sm:py-12 mt-6 rounded-2xl shadow-lg font-thin">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-around items-center text-center divide-y sm:divide-y-0 sm:divide-x divide-zinc-700">
           
           {/* Projects */}

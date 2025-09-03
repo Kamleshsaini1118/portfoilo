@@ -37,10 +37,10 @@ const TechSection = () => {
   ];
 
   return (
-    <div className="w-full py-20 bg-black text-white">
+    <div className="w-full py-20 bg-black text-white font-thin">
       <div className="w-full mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl font-bold text-center md:py-2 mb-8 md:mb-20 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl sm:text-5xl  text-center md:py-2 mb-8 md:mb-20 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
           Technologies & Skills ⚡
         </h2>
 
