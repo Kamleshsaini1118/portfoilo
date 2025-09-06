@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 // import AboutSection from "./components/AboutSection";
 // import HeroSection from "./components/HeroSection";
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           {/* <Route path="/hero" element={<HeroSection />} /> */}
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

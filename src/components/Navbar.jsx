@@ -48,14 +48,14 @@ const Navbar = () => {
           <ScrollLink to="about" smooth={true} duration={600} offset={-70} className="cursor-pointer hover:text-green-500">
             About
           </ScrollLink>
+          <ScrollLink to="tech" smooth={true} duration={600} offset={-70} className="cursor-pointer hover:text-green-500">
+            Skills
+          </ScrollLink>
           <ScrollLink to="projects" smooth={true} duration={600} offset={-70} className="cursor-pointer hover:text-green-500">
             Projects
           </ScrollLink>
           <ScrollLink to="achievements" smooth={true} duration={600} offset={-70} className="cursor-pointer hover:text-green-500">
             Achievements
-          </ScrollLink>
-          <ScrollLink to="contact" smooth={true} duration={600} offset={-70} className="cursor-pointer hover:text-green-500">
-            Contact
           </ScrollLink>
         </div>
 
