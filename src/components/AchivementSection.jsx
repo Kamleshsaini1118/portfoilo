@@ -38,7 +38,7 @@ const AchivementSection = () => {
             className="bg-zinc-900/50 hover:border-green-400/50 transition-all duration-300 rounded-lg p-4 sm:p-6 shadow-lg hover:shadow-green-400/20"
           >
             {/* Description */}
-            <p className="text-zinc-500 text-xs sm:text-sm md:text-base">{ach.desc}</p>
+            <p className="text-zinc-500 text-sm md:text-base">{ach.desc}</p>
 
             {/* Links */}
             <div className="mt-3 sm:mt-4 flex gap-2 sm:gap-4 flex-wrap">

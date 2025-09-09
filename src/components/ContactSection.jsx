@@ -3,10 +3,10 @@ import { FaTwitter, FaFacebookF, FaGoogle, FaInstagram } from "react-icons/fa";
 
 const ContactSection = () => {
   return (
-    <div className="flex flex-col md:flex-row min-h-screen text-white font-sans m-3 md:m-[70px]">
+    <div className="flex flex-col md:flex-row min-h-screen text-white font-sans m-3 md:m-[70px] ">
       {/* Left Section */}
       <div
-        className="flex-1.5 flex flex-col justify-end p-8 md:p-16 bg-cover bg-center"
+        className="flex-1.5 flex flex-col justify-end p-8 md:p-16 bg-cover bg-center rounded-t-xl md:rounded-l-xl"
         style={{ backgroundImage: "url('/bg-1.png')" }}
       >
         <div>
@@ -28,7 +28,7 @@ const ContactSection = () => {
       </div>
 
       {/* Right Section */}
-      <div className="flex-1 bg-zinc-900/40 p-5 md:p-16 pt-20 flex flex-col justify-center">
+      <div className="flex-1 bg-zinc-900/40 p-5 md:p-16 pt-20 flex flex-col justify-center rounded-b-xl md:rounded-r-xl">
         <div>
           <h2 className="text-4xl md:text-6xl font-thin mb-2">Get a quote</h2>
           <p className="text-zinc-500 font-thin text-sm md:text-base mb-6">We will get back to you in 24 hours</p>
