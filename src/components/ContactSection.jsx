@@ -28,7 +28,7 @@ const ContactSection = () => {
       </div>
 
       {/* Right Section */}
-      <div className="flex-1 bg-zinc-900/40 p-5 md:p-16 pt-20 flex flex-col justify-center rounded-b-xl md:rounded-r-xl">
+      <div className="flex-1 bg-zinc-900/40 p-5 md:p-16 pt-8 md:pt-20 flex flex-col justify-center rounded-b-xl md:rounded-r-xl">
         <div>
           <h2 className="text-4xl md:text-6xl font-thin mb-2">Get a quote</h2>
           <p className="text-zinc-500 font-thin text-sm md:text-base mb-6">We will get back to you in 24 hours</p>
