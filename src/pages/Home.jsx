@@ -4,6 +4,7 @@ import AboutSection from "../components/AboutSection";
 import TechSection from "../components/TechSection";
 import ProjectSection from "../components/ProjectSection";
 import AchievementSection from "../components/AchivementSection";
+import ContactSection from "../components/ContactSection";
 
 const Home = () => {
   return (
@@ -29,7 +30,7 @@ const Home = () => {
       </div>
 
       <div id="contact" >
-        
+        <ContactSection />
       </div>
     </>
   );
