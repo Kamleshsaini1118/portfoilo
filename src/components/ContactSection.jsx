@@ -106,14 +106,16 @@
 
 // export default ContactSection;
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { FaTwitter, FaFacebookF, FaGoogle, FaInstagram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Confetti from "react-confetti";
 
 const ContactSection = () => {
   const form = useRef();
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -121,6 +123,7 @@ const ContactSection = () => {
     // ⏳ Show instant loading toast
     const loadingToast = toast.loading("Sending your message...", {
       position: "top-center",
+      style: { fontWeight: "300", fontSize: "16px", minHeight: "60px", minWidth: "300px" },
     });
 
     emailjs
@@ -132,13 +135,29 @@ const ContactSection = () => {
       )
       .then(
         (result) => {
+          // ✅ Success toast with gradient-like effect
           toast.update(loadingToast, {
-            render: "✅ Message sent successfully! I'll get back to you soon.",
+            render: "Thank you for connecting! Your message has been received. I’ll get back to you within 1–2 business days.",
             type: "success",
             isLoading: false,
-            autoClose: 2000,
-            theme: "colored",
+            autoClose: 2500,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            style: {
+              fontWeight: "300",
+              fontSize: "16px",
+              minHeight: "70px",
+              minWidth: "350px",
+              background: "linear-gradient(to right, #00c6ff, #0072ff)", // gradient green-blue
+              color: "#fff",
+            },
           });
+
+          // Show confetti
+          setShowConfetti(true);
+          setTimeout(() => setShowConfetti(false), 7000);
+
           form.current.reset();
         },
         (error) => {
@@ -147,16 +166,18 @@ const ContactSection = () => {
             type: "error",
             isLoading: false,
             autoClose: 3000,
-            theme: "colored",
+            style: { fontWeight: "300", fontSize: "16px", minHeight: "60px", minWidth: "300px" },
           });
         }
       );
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen text-white font-sans m-3 md:m-[70px]">
-      {/* Toastify container */}
+    <div className="flex flex-col md:flex-row min-h-screen text-white font-sans m-3 md:m-[70px] relative">
+      {/* Toastify */}
       <ToastContainer />
+      {/* Confetti */}
+      {showConfetti && <Confetti width={window.innerWidth} height={window.innerHeight} />}
 
       {/* Left Section */}
       <div
