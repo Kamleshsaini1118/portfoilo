@@ -106,7 +106,6 @@
 
 // export default ContactSection;
 
-
 import React, { useRef } from "react";
 import { FaTwitter, FaFacebookF, FaGoogle, FaInstagram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
@@ -119,59 +118,35 @@ const ContactSection = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // 1. Mail to YOU
+    // ⏳ Show instant loading toast
+    const loadingToast = toast.loading("Sending your message...", {
+      position: "top-center",
+    });
+
     emailjs
       .sendForm(
-        "service_6jhjx2w", // your service ID
-        "template_wx1r5yb", // template for YOUR inbox
+        "service_6jhjx2w",
+        "template_wx1r5yb",
         form.current,
-        "EADXyW2jDJGacPRFc" // your public key
+        "EADXyW2jDJGacPRFc"
       )
       .then(
         (result) => {
-          console.log("Message sent to you:", result.text);
-
-          // ✅ Success toast
-          toast.success("✅ Message sent successfully! I'll get back to you soon.", {
-            position: "mid-center",
+          toast.update(loadingToast, {
+            render: "✅ Message sent successfully! I'll get back to you soon.",
+            type: "success",
+            isLoading: false,
             autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
             theme: "colored",
           });
-
           form.current.reset();
-
-          // 2. Auto-Reply (optional)
-          emailjs
-            .sendForm(
-              "service_6jhjx2w", // same service ID
-              "template_bdrhyag", // template for auto-reply
-              form.current,
-              "EADXyW2jDJGacPRFc"
-            )
-            .then(
-              () => {
-                console.log("Auto-reply sent to user");
-              },
-              (error) => {
-                console.error("Auto-reply error:", error.text);
-              }
-            );
         },
         (error) => {
-          console.error("Error sending to you:", error.text);
-
-          // ❌ Error toast
-          toast.error("❌ Something went wrong, please try again.", {
-            position: "top-right",
+          toast.update(loadingToast, {
+            render: "❌ Something went wrong. Please try again.",
+            type: "error",
+            isLoading: false,
             autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
             theme: "colored",
           });
         }
@@ -273,4 +248,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
