@@ -123,7 +123,12 @@ const ContactSection = () => {
     // ⏳ Show instant loading toast
     const loadingToast = toast.loading("Sending your message...", {
       position: "top-center",
-      style: { fontWeight: "300", fontSize: "16px", minHeight: "60px", minWidth: "300px" },
+      style: {
+        fontWeight: "300",
+        fontSize: "16px",
+        minHeight: "60px",
+        minWidth: "300px",
+      },
     });
 
     emailjs
@@ -137,7 +142,8 @@ const ContactSection = () => {
         (result) => {
           // ✅ Success toast with gradient-like effect
           toast.update(loadingToast, {
-            render: "Thank you for connecting! Your message has been received. I’ll get back to you within 1–2 business days.",
+            render:
+              "Thank you for connecting! Your message has been received. I’ll get back to you within 1–2 business days.",
             type: "success",
             isLoading: false,
             autoClose: 2500,
@@ -166,7 +172,12 @@ const ContactSection = () => {
             type: "error",
             isLoading: false,
             autoClose: 3000,
-            style: { fontWeight: "300", fontSize: "16px", minHeight: "60px", minWidth: "300px" },
+            style: {
+              fontWeight: "300",
+              fontSize: "16px",
+              minHeight: "60px",
+              minWidth: "300px",
+            },
           });
         }
       );
@@ -177,7 +188,9 @@ const ContactSection = () => {
       {/* Toastify */}
       <ToastContainer />
       {/* Confetti */}
-      {showConfetti && <Confetti width={window.innerWidth} height={window.innerHeight} />}
+      {showConfetti && (
+        <Confetti width={window.innerWidth} height={window.innerHeight} />
+      )}
 
       {/* Left Section */}
       <div
@@ -189,8 +202,9 @@ const ContactSection = () => {
             Keep In Touch...
           </h1>
           <p className="text-gray-300 text-sm font-thin md:text-lg leading-relaxed max-w-xl mb-4 md:mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Whether it's a question or a friendly hello, Drop a message and let
+            your thoughts flow! I'm here to listen, ready to respond, Let's
+            connect and forge a bond.
           </p>
           <div className="flex space-x-4 text-xl md:text-2xl">
             <FaTwitter className="cursor-pointer opacity-70 hover:opacity-100 transition" />
