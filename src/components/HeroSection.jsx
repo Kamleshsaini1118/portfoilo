@@ -12,7 +12,7 @@ const HeroSection = () => {
 
       {/* Name */}
       <h1 className="text-5xl md:text-7xl lg:text-9xl font-semibold mt-5 bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
-        Kamlesh Saini.
+        Kamlesh Saini
       </h1>
 
       {/* Typewriter animation */}
