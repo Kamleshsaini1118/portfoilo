@@ -207,10 +207,22 @@ const ContactSection = () => {
             connect and forge a bond.
           </p>
           <div className="flex space-x-4 text-xl md:text-2xl">
-            <FaTwitter className="cursor-pointer opacity-70 hover:opacity-100 transition" />
-            <FaFacebookF className="cursor-pointer opacity-70 hover:opacity-100 transition" />
-            <FaGoogle className="cursor-pointer opacity-70 hover:opacity-100 transition" />
-            <FaInstagram className="cursor-pointer opacity-70 hover:opacity-100 transition" />
+            <a href="https://www.x.com" target="_black" rel="noreferrer">
+              <FaTwitter className="cursor-pointer opacity-70 hover:opacity-100 transition" />
+            </a>
+            <a href="https://www.facebook.com" target="_black" rel="noreferrer">
+              <FaFacebookF className="cursor-pointer opacity-70 hover:opacity-100 transition" />
+            </a>
+            <a href="https://www.google.com" target="_blank" rel="noreferrer">
+              <FaGoogle className="cursor-pointer opacity-70 hover:opacity-100 transition" />
+            </a>
+            <a
+              href="https://www.instagram.com/kamleshsaini1118/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram className="cursor-pointer opacity-70 hover:opacity-100 transition" />
+            </a>
           </div>
         </div>
       </div>
