@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Top Navbar */}
       <div className="container mx-auto flex justify-between items-center px-4 md:px-12 relative z-[60]">
         {/* Logo */}
-        <div className="text-3xl font-bold">
+        <div className="text-3xl font-bold cursor-pointer">
           <ScrollLink to="home" smooth={true} duration={600} offset={-70}>
             <span style={{ color: "gray" }}>{"{"}</span>
             KS

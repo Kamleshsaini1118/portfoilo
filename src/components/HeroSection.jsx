@@ -72,7 +72,7 @@ const HeroSection = () => {
         </a>
 
         <a
-          href="https://drive.google.com/file/d/1eQGZ1kxFIQPpii_qlQpGIySF5q7y_jJI/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1wn7ovou4RhewmiWV5CVb0Lx_XMTiRioK/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-10 border border-green-300 p-2 md:px-6 md:py-3 text-sm md:text-base rounded-lg text-green-300 font-semibold hover:bg-zinc-900 flex items-center gap-2 justify-center"
